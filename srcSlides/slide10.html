@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Getting starting into three.js</title>
+        <meta charset="utf-8">
+    </head>
+    <body style="margin: 0;">
+        <div id="container"></div>
+        <script src="three.min.js"></script>
+        <script>
+
+            var scene, camera, renderer, mesh;
+
+            function init() {
+                // set the scene size
+                var WIDTH = window.innerWidth,
+                    HEIGHT = window.innerHeight,
+                // set some camera attributes
+                    VIEW_ANGLE = 45,
+                    ASPECT = WIDTH / HEIGHT,
+                    NEAR = 0.1,
+                    FAR = 10000,
+                // get the DOM element to attach to
+                    $container = document.getElementById('container');
+                // create a WebGL renderer, camera and a scene
+                renderer = new THREE.WebGLRenderer();
+                camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+                scene = new THREE.Scene();
+
+                // add the camera to the scene
+                scene.add(camera);
+                // the camera starts at 0,0,0 so pull it back
+                camera.position.z = 300;
+                // set the viewport and change background color;
+                renderer.setSize(WIDTH, HEIGHT);
+                renderer.setClearColorHex( 0x999999, 1 );
+                // attach the render-supplied DOM element
+                $container.appendChild(renderer.domElement);
+
+                var geometry = new THREE.BoxGeometry(50,50,50),
+                    material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
+                mesh = new THREE.Mesh( geometry, material );
+                //  rotate a bit to allow the 3d aspect;
+                mesh.rotation.x = 0.75;
+                mesh.rotation.y = 0.75;
+
+                scene.add(mesh);
+
+                // create a point light
+                var pointLight = new THREE.PointLight(0xFFFFFF);
+                pointLight.position.z = camera.position.z;
+                pointLight.position.x = pointLight.position.y = 75;
+
+                // add to the scene
+                scene.add(pointLight);
+            }
+            init();
+
+            (function render() {
+                requestAnimationFrame(render);
+
+                mesh.rotation.x += 0.01;
+                mesh.rotation.y += 0.01;
+
+                renderer.render(scene, camera);
+            }());
+
+        </script>
+
+    </body>
+</html>`
+
+

@@ -8,7 +8,7 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## @@title
 
-<img src="img/cover.jpg" class="logo" />
+
 
 @@author @ [Avenue Code](http://www.avenuecode.com)
 
@@ -20,213 +20,198 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## Agenda
 
- - The template
-  - Installing
-  - Working
-  - Deploying
- - Your talk
-  - Organization
-  - Content requirements
-  - Communication requirements
-  - The DONT's
-  - Tips
-  - If you are recording
-
-----
-
-## Agenda
-
- - Contributing
- - Learn more
- - Conclusion
- - Assignment
+- Prerequisites
+- Browser Compatibility
+- Getting Started
+- Setting up
+- Models and Materials
+- Let there be light
+- I like to move it, move it
+- Conclusion
+- Learn More
+- Challenge
 
 ---
 
 ## Prerequisites
 
-- Markdown
-- Reveal.js
-- Grunt
+- Advanced javascript
+- Some 3D modeling
+- Some Math knowledge
 
 ---
 
-## The template
+## Browser Compatibility
 
-1. The Avenue Code talk template is a responsive, web-based talk template.
-1. This template is based on [Reveal.JS](http://lab.hakim.se/reveal-js).
-1. All you need to do is to write your content in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-1. There are some [Grunt](http://gruntjs.com) jobs to automatize the build process.
-1. It has *automatic code highlighting*, guessing the programming language you used.
-1. Once it is described in *README.md*, the talk contents will also be available as the repository description which is a common format for tutorials.
-
-----
-
-## Setting up your repo
-
-1. Sign in on GitHub
-1. Fork the repository <https://github.com/acbr/talk-template>
-1. Rename it to match your talk name (ex: *talk-design-patterns*)
-1. Clone this repository
-1. Navigate to its folder on the terminal
-
-----
-
-## Building and running
-
-1. Install [Node.js](http://nodejs.org/)
-1. Install [Grunt](http://gruntjs.com/getting-started#installing-the-cli)
-1. On the repo folder, install the npm dependencies
-```sh
-$ npm install
-```
-1. Build it, serve it and monitor source files for changes
-```sh
-$ grunt
-```
-1. Open <http://localhost:8000> to view your talk
-
-----
-
-## Working
-
-1. Open up *config.json* and fill your talk data such as title, author, email, date and description.
-  - That is the *ONLY FILE* you should edit on the project root!
-1. Any further change you will do is inside the *src* folder, such as:
-  - *src/README.md* to write your talk content in *Markdown*
-  - *src/index.html* to modify the HTML
-1. Grunt will generate files on the project root as you change *src*.
-1. In order to separate slides horizontally, use 3 dashes (---).
-1. In order to separate slides vertically, use 4 dashes (----).
-1. In order to *call out attention*, put an asterisk around your text:
-```
-In order to *call out attention*, ...
-```
-
-----
-
-## Deploying
-
-1. Make sure your build is not breaking.
-  - You should see *Done, without errors.* in the terminal.
-1. *git add*, *git commit* and *git push* to *gh-pages* branch.
-1. You should see your talk in an address like:
-  - http://*your-github-username*.github.io/*your-repo-name*
-  - Ex: <http://acbr.github.io/talk-template>
+- Chrome, Firefox, Safari, IE (11+)
+- *NO* mobile support
+- [Support table](http://caniuse.com/#search=webgl)
 
 ---
 
-## Your talk
+## Getting Started
 
- - Should last no more than 50 minutes, leave up to 10 minutes for questions.
- - Should not be too deep neither too superficial.
- - Give at least 3 reference links to be followed for further studies.
- - Give a challenge that would be solved using ideas that were covered on the talk.
- - It is ok to go a little bit far (forcing the attendee to do some research), but that should be optional.
-
-----
-
-## Organization
-
- - 1st slide: the cover, featuring your talk name, your name, the lecture date and AC logo.
- - 2nd slide: the agenda, in topics.
- - 3nd slide: the prerequisites of your talk.
- - From 4th slide on: your content
-  - When content from the same topic doesn't fit on a slide -> grow it *VERTICALLY* by adding a slide below (----).
-  - When you finish a topic and will start a different one -> grow it *HORIZONTALLY* by adding a slide to the right (---).
- - The 3 last slides: Conclusion, Learn more (with the reference links) and Challenge.
+- Get it at [Three.js](http://threejs.org/).
+- MIT Licensed.
+- Open source.
+- It's part of [Khronos Group](http://www.khronos.org/webgl/), not W3C.
+- Setup a local environment for localy dev avoid many erros with same-origin policy;
 
 ----
 
-## Content requirements
+## Getting Started :: Samples
 
-1. *BE CONSISTENT*. Master the subject and do not contradict yourself.
-1. *CATCH THE ATTENTION*. Let the audience know WHY they cannot live one more day without this technology.
-1. *BALANCE THEORY AND PRACTICE*. Your target is keeping the subject interesting for everybody.
-1. *BE CONCISE*. Don't overexplain in such way you could cause confusion to your attendees.
-1. *KEEP THE FOCUS*. Off-topic discussions are ok, but only if it doesn't disturb the natural flow of your content.
-1. *BE PREPARED*. If you are going to use examples or live coding, make sure you have them all prepared beforehand.
+- http://threejs.org/examples/webgl_materials_cubemap_balls_reflection.html
+- http://acko.net/
+- http://www.chaostoperfection.com/
+- http://hellorun.helloenjoy.com/
 
 ----
 
-## Communication requirements
+## Getting Started :: Markup
 
-1. *COMMUNICATE WELL*. Be sharp on English, no bad words or slangs and use the best words for the audience.
-1. *BE A PRO*. Please watch some good screencasts in order to learn how to use your voice and conduct the talk.
-1. *BE POLITE*. Be respectful and avoid heavy criticism.
-1. *BE PROFESSIONAL*. Use jokes and humor with parsimony.
-1. *TRAIN* your full talk at least once before your talk.
-
-----
-
-## The DONT's
-
-1. *DO NEVER SHOW PRIVATE CODE FROM THE CLIENT*. This is CRITICAL and can cause serious problems.
-1. *DON'T BE ARROGANT*. Be humble and don't focus the talk on yourself.
-1. *DON'T GENERALIZE*, specially stuff that you are not sure about.
-1. *DON'T MAKE UP DATA*. Base yourself on trustable references.
-1. *DON'T TALK LIKE A ROBOT*. Just be yourself, natural. Relax :)
+    <html lang="en">
+        <head>
+            <title>Getting starting into three.js</title>
+            <meta charset="utf-8">
+        </head>
+        <body style="margin: 0;">
+            <script src="js/three.min.js" >
+            </script>
+            <script>
+                // Our 3D code will go here...
+            </script>
+        </body>
+    </html>`
 
 ----
 
-## Tips
+## Getting Started :: Concepts
 
- - *ENJOY* your experience by creating the talk, because you will surely learn MUCH MORE than your attendees.
- - *BRING WATER* to drink while you present. You will certainly need it!
- - *BE OPEN* to receive questions and even criticism. You will learn a lot from them.
- - *ALWAYS* be polite when talking to your audience. This will always open doors for you.
- - People might come to you with questions and more complex cases after your talk. Consider it as a gift, it means you represent something good for them!
+- *Mesh* is a collection of Vertex, Edges and Faces that describe the surface, the shape, of any given object;
+- *Vertex* is the corner of the object, where two or more faces and edges collide;
+- *Edge* is a line that connects two vertex, or the boundary in a circle;
+- *Face* is the area inside edges or individual surface of a solid object;
+- *Asset* is any digital content, usually artistic, that includes the 'right to use it';
 
 ----
 
-## If you are recording
+## Getting Started :: Utility
 
-- Make sure you use a professional microphone when available.
-- Don't do *drastic transitions* on your screen, as the recorded amount of frames per second is low.
-- Ask atendees to only make questions on the end - so future watchers will just get the real content without interruption.
-- Introduce yourself: "Hello everybody, my name is xxxx, I work for Avenue Code and today's talk will be about yyyyy". Finish it like: "That's it, thanks for watching.".
-- Problems with recording/connection? Always restart from the beginning of the slide. Don't try to restart from where it fails, its impossible to do a clean cut on the video after that.
+- *Detector.js*, included in three.js, it detects if the WebGl is supported. Similar to Modernizr.
+- *Stats.js* it's a javascript performance monitor, created by the same author as Three.js.
 
 ---
 
-## Contributing
+## Setting up
 
-Should you wish to contribute, please be welcome to!
+- To be able the display anything you need, at least, three things:
+1. A scene
+2. A renderer
+3. A camera
 
-1. Fork the repository <https://github.com/acbr/talk-template>
-1. Create a feature branch for your contribution
-```sh
-git checkout -b my-new-feature
-```
-1. Commit your changes
-```sh
-git commit -am 'Add some feature'
-```
-1. Push to the branch
-```sh
-git push origin my-new-feature
-```
-1. Create a Pull Request
+----
+
+## Setting up :: Scene
+
+- *Scene* is where every object is added to be rendered.
+        var scene = new THREE.Scene();
+
+----
+
+## Setting up :: Renderer
+
+- *Renderer* is which tech will be used to display the scene;
+- WebGl, Canvas e SVG renderers are built-in in Three.js;
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth , window.innerHeight);
+
+- If you enable Detector.js, you could use some fallback;
+        var renderer = Detector.webgl
+            ? new THREE.WebGLRenderer()
+            : new THREE.CanvasRenderer();
+
+- Run the render method to actually display the scene.
+        renderer.render(scene, camera);
+
+----
+
+## Setting up :: Camera
+
+- *Camera* is how the scene will be displayed.
+        //  set some camera attributes
+        var VIEW_ANGLE = 45,
+            ASPECT = window.innerWidth / window.innerHeight,
+            NEAR = 0.1,
+            FAR = 10000,
+        //  create the camera
+            camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+        // the camera starts at 0,0,0 so pull it back
+        camera.position.z = 300;
+
+
+---
+
+## Models and Materials
+
+- Is really hard to create models with vanilla javascript;
+- Commonly models are made in 3D modeling tools as Maya, Blender, SketchUp, etc;
+- If you preferred tool don't export to any "ready-to-use" format, use *collada* or *object* format then go to the [Three.js online editor](http://threejs.org/editor/);
+- Load your assets using the appropriate loader;
+        var loader = new THREE.JSONLoader();
+- Built-ins Geometry and Material;
+        var geometry = new THREE.BoxGeometry(1,1,1),
+            material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } ),
+            mesh = new THREE.Mesh( geometry, material );
+
+---
+
+## Let there be light
+
+- There are many built-in light in Three.js
+- In *ambient* light every face of every object in the scene receive the same amount of light;
+- In *directional* light an light ray shines to the infinite;
+- The *point* light is placed in one point and shines in all directions;
+        // create a point light
+        var pointLight = new THREE.PointLight(0xFFFFFF);
+        pointLight.position.z = camera.position.z;
+        pointLight.position.x = pointLight.position.y = 75;
+        // add to the scene
+        scene.add(pointLight);
+
+---
+
+## I like to move it, move it
+
+- The renderer will render the current state of each object currently in the scene;
+        (function render() {
+            requestAnimationFrame(render);
+
+            mesh.rotation.x += 0.01;
+            mesh.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        }());
+
+- *requestAnimationFrame* should be used with caution due to cross-browser issues, [Paul Irish's shim](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) is highly recommend;
 
 ---
 
 ## Conclusion
 
-- This talk template rocks!
-- Your life should be easier now.
+- Three.js is a really simple yet powerful library. Like jQuery, for 3D.
+- The library allow people with small knowledge in WebGl to build even complex 3D applications;
+- We just scratch the surface, Three.js is a gold mine waiting for be explored;
 
 ---
 
 ## Learn more
 
-1. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-1. [Reveal.JS](https://github.com/hakimel/reveal.js)
-1. [Grunt](http://gruntjs.com)
+- [Three.js Samples](http://threejs.org/)
+- [3D Modeling courses](http://www.digitaltutors.com/subject/3d-tutorials)
 
 ---
 
 ## Challenge
 
-1. Make your awesome talk based on this template.
-1. Push it to a gh-pages branch on your GitHub account.
-1. Share the URL with the world!
+- Build any Scene that uses all concepts showed in this talk.

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Getting starting into three.js</title>
+        <meta charset="utf-8">
+    </head>
+    <body style="margin: 0;">
+        <div id="container"></div>
+        <script src="three.min.js"></script>
+        <script>
+
+            var scene, camera, renderer;
+
+            function init() {
+                // set the scene size
+                var WIDTH = window.innerWidth,
+                    HEIGHT = window.innerHeight,
+                // set some camera attributes
+                    VIEW_ANGLE = 45,
+                    ASPECT = WIDTH / HEIGHT,
+                    NEAR = 0.1,
+                    FAR = 10000,
+                // get the DOM element to attach to
+                    $container = document.getElementById('container');
+                // create a WebGL renderer, camera and a scene
+                renderer = new THREE.WebGLRenderer();
+                camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+                scene = new THREE.Scene();
+
+                // add the camera to the scene
+                scene.add(camera);
+                // the camera starts at 0,0,0 so pull it back
+                camera.position.z = 300;
+                // set the viewport and change background color;
+                renderer.setSize(WIDTH, HEIGHT);
+                renderer.setClearColorHex( 0x999999, 1 );
+                // attach the render-supplied DOM element
+                $container.appendChild(renderer.domElement);
+            }
+            init();
+            renderer.render(scene, camera);
+
+        </script>
+
+    </body>
+</html>`
+
+
