@@ -51,11 +51,12 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## Getting Started
 
-- Get it at [Three.js](http://threejs.org/).
-- MIT Licensed.
-- Open source.
-- It's part of [Khronos Group](http://www.khronos.org/webgl/), not W3C.
-- Setup a local environment for localy dev avoid many erros with same-origin policy;
+- Get it at [Three.js](http://threejs.org/);
+- Or install in *node* with
+        $ npm install three;
+- MIT Licensed and open source;
+- Setup a local environment for locally dev avoid many errors with same-origin policy;
+- WebGL it's part of [Khronos Group](http://www.khronos.org/webgl/), not W3C;
 
 ----
 
@@ -70,19 +71,22 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## Getting Started :: Markup
 
+```html
+    <!doctype html>
     <html lang="en">
         <head>
             <title>Getting starting into three.js</title>
             <meta charset="utf-8">
         </head>
         <body style="margin: 0;">
-            <script src="js/three.min.js" >
-            </script>
-            <script>
+            <div id="container"></div>
+            <script type="text/javascript" src="js/three.min.js" ></script>
+            <script type="text/javascript">
                 // Our 3D code will go here...
             </script>
         </body>
-    </html>`
+    </html>
+```
 
 ----
 
