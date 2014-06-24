@@ -55,48 +55,48 @@ You should just edit the source file at src/README.md - the one which stars with
 - Or install in *node* with
         $ npm install three;
 - MIT Licensed and open source;
-- Setup a local environment for locally dev avoid many errors with same-origin policy;
-- WebGL it's part of [Khronos Group](http://www.khronos.org/webgl/), not W3C;
+- Setup a local environment for local dev avoid many errors with same-origin policy;
+- WebGL is part of [Khronos Group](http://www.khronos.org/webgl/), not W3C;
 
 ----
 
 ## Getting Started :: Samples
 
-- http://threejs.org/examples/webgl_materials_cubemap_balls_reflection.html
+- [Threejs.org - Reflection example](http://threejs.org/examples/webgl_materials_cubemap_balls_reflection.html)
+- http://hellorun.helloenjoy.com/
 - http://acko.net/
 - http://www.chaostoperfection.com/
-- http://hellorun.helloenjoy.com/
 
 ----
 
 ## Getting Started :: Markup
 
-```html
-    <!doctype html>
-    <html lang="en">
-        <head>
-            <title>Getting starting into three.js</title>
-            <meta charset="utf-8">
-        </head>
-        <body style="margin: 0;">
-            <div id="container"></div>
-            <script type="text/javascript" src="js/three.min.js" ></script>
-            <script type="text/javascript">
-                // Our 3D code will go here...
-            </script>
-        </body>
-    </html>
-```
+        <!doctype html>
+        <html lang="en">
+            <head>
+                <title>Getting starting into three.js</title>
+                <meta charset="utf-8">
+            </head>
+            <body style="margin: 0;">
+                <div id="container"></div>
+                <script type="text/javascript" src="js/three.min.js" ></ script>
+                <script type="text/javascript">
+                    // Our 3D code will go here...
+                </ script>
+            </body>
+        </html>
 
 ----
 
 ## Getting Started :: Concepts
 
+- *Asset* is any digital content, usually artistic, that includes the 'right to use' it;
 - *Mesh* is a collection of Vertex, Edges and Faces that describe the surface, the shape, of any given object;
-- *Vertex* is the corner of the object, where two or more faces and edges collide;
-- *Edge* is a line that connects two vertex, or the boundary in a circle;
-- *Face* is the area inside edges or individual surface of a solid object;
-- *Asset* is any digital content, usually artistic, that includes the 'right to use it';
+- *Vertex* is the corner of the object;
+- *Edge* is a line that connects two vertex;
+- *Faces* are individual surfaces of a solid object;
+
+![Mesh example](img/mesh.jpg)
 
 ----
 
@@ -109,10 +109,11 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## Setting up
 
-- To be able the display anything you need, at least, three things:
-1. A scene
-2. A renderer
-3. A camera
+- To be able to the display anything you need, at least, three things:
+
+  1. A scene
+  1. A renderer
+  1. A camera
 
 ----
 
@@ -143,30 +144,28 @@ You should just edit the source file at src/README.md - the one which stars with
 ## Setting up :: Camera
 
 - *Camera* is how the scene will be displayed.
-        //  set some camera attributes
-        var VIEW_ANGLE = 45,
+        var VIEW_ANGLE = 45, NEAR = 0.1, FAR = 10000,
             ASPECT = window.innerWidth / window.innerHeight,
-            NEAR = 0.1,
-            FAR = 10000,
-        //  create the camera
             camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
         // the camera starts at 0,0,0 so pull it back
         camera.position.z = 300;
+
+![Example of camera parameters](img/cam-param.jpg)
 
 
 ---
 
 ## Models and Materials
 
-- Is really hard to create models with vanilla javascript;
-- Commonly models are made in 3D modeling tools as Maya, Blender, SketchUp, etc;
-- If you preferred tool don't export to any "ready-to-use" format, use *collada* or *object* format then go to the [Three.js online editor](http://threejs.org/editor/);
-- Load your assets using the appropriate loader;
-        var loader = new THREE.JSONLoader();
 - Built-ins Geometry and Material;
         var geometry = new THREE.BoxGeometry(1,1,1),
             material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } ),
             mesh = new THREE.Mesh( geometry, material );
+- It's really hard to create models with vanilla javascript;
+- Commonly models are made in 3D modeling tools as Maya, Blender, SketchUp, etc;
+- Load your assets using the appropriate loader;
+        var loader = new THREE.JSONLoader();
+- If your preferred tool don't export to any "ready-to-use" format, use *collada* or *object* format then go to [Three.js online editor](http://threejs.org/editor/);
 
 ---
 
@@ -218,4 +217,7 @@ You should just edit the source file at src/README.md - the one which stars with
 
 ## Challenge
 
-- Build any Scene that uses all concepts showed in this talk.
+  1. Download/Create a model, like a house, then *import*, apply a *texture* and add some *lighting*;
+  1. Create a awesome Space-ship that you can *control* on the keyboard/mouse and *shoot* deathly missiles;
+  1. Build a new legendary screen-saver with abstract *shapes* and random *animations* or *glowing* lights;
+  1. Build any scene that uses *all concepts* showed in this talk with *camera* control;
