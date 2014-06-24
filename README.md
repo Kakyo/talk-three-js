@@ -112,8 +112,8 @@ Jul 24th, 2014
 - To be able to the display anything you need, at least, three things:
 
   1. A scene
-  1. A renderer
   1. A camera
+  1. A renderer
 
 ----
 
@@ -121,23 +121,6 @@ Jul 24th, 2014
 
 - *Scene* is where every object is added to be rendered.
         var scene = new THREE.Scene();
-
-----
-
-## Setting up :: Renderer
-
-- *Renderer* is which tech will be used to display the scene;
-- WebGl, Canvas e SVG renderers are built-in in Three.js;
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth , window.innerHeight);
-
-- If you enable Detector.js, you could use some fallback;
-        var renderer = Detector.webgl
-            ? new THREE.WebGLRenderer()
-            : new THREE.CanvasRenderer();
-
-- Run the render method to actually display the scene.
-        renderer.render(scene, camera);
 
 ----
 
@@ -151,6 +134,25 @@ Jul 24th, 2014
         camera.position.z = 300;
 
 ![Example of camera parameters](img/cam-param.jpg)
+
+----
+
+## Setting up :: Renderer
+
+- *Renderer* is which tech will be used to display the scene;
+- WebGl, Canvas e SVG renderers are built-in in Three.js;
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth , window.innerHeight);
+
+- If you enable Detector.js, you could use some fallback;
+
+        var renderer = Detector.webgl
+            ? new THREE.WebGLRenderer()
+            : new THREE.CanvasRenderer();
+
+- Run the render method to actually display the scene.
+        renderer.render(scene, camera);
 
 
 ---
